@@ -1,0 +1,40 @@
+---
+import datos from "../lib/data.json";
+import { Image } from "astro:assets";
+import avatar from "../assets/imgs/avatar.jpg";
+
+type Work = {
+  title: string;
+  type: string;
+  description: string;
+  image: string;
+  link: string;
+  extra?: string;
+};
+
+const { filtro } = Astro.props;
+const works: Work[] = datos
+  .filter((work) => filtro === "todos" || work.type.toLowerCase() === filtro)
+  .map((work) => ({
+    title: work.title,
+    type: work.type,
+    description: work.desc,
+    image: work.img,
+    link: work.git,
+    extra: work.extra || "no",
+  }));
+---
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  {
+    works.map((work) => (
+      <article>
+        <h1>{work.title}</h1>
+        <img src={work.image} alt="#" />
+        <p>{work.description}</p>
+        <a href={work.link}>GitHub del Proyecto</a>
+        {work.extra ? <a href={work.extra}>Link del Proyecto</a> : ""}
+      </article>
+    ))
+  }
+</section>

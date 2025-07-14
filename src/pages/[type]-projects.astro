@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Works from "../components/Works.astro";
+import "../styles/global.css";
+
+export function getStaticPaths() {
+  return [
+    { params: { type: "todos" } },
+    { params: { type: "full" } },
+    { params: { type: "front" } },
+    { params: { type: "back" } },
+  ];
+}
+
+const filtro = Astro.params.type || "todos";
+---
+
+<Layout>
+  <section
+    class="flex-grow flex flex-col justify-start text-[var(--text-main)]"
+  >
+    <h1 class="text-5xl m-4 text-center">Mis Proyectos</h1>
+
+    <form id="form" class="flex flex-wrap justify-center gap-2 px-4 mb-6">
+      {
+        [
+          { id: "todos", label: "Todos" },
+          { id: "full", label: "Full-Stack" },
+          { id: "front", label: "Front-End" },
+          { id: "back", label: "Back-End" },
+        ].map(({ id, label = false }) => (
+          <label
+            for={id}
+            class="cursor-pointer relative px-4 py-2 rounded-full border border-green-300 text-green-300 hover:text-cyan-300 hover:border-cyan-300 transition peer-checked:bg-cyan-400 peer-checked:text-black peer-checked:border-cyan-300"
+          >
+            <input type="radio" name="filtro" id={id} class="sr-only peer" />
+            {label}
+          </label>
+        ))
+      }
+    </form>
+    <!-- Display Projects -->
+    <Works filtro={filtro} />
+  </section>
+</Layout>
+
+<script is:inline>
+  const form = document.getElementById("form");
+  if (form) {
+    form.addEventListener("change", (e) => {
+      const filtro = e.target?.id;
+      if (filtro) {
+        window.location.replace(`/${filtro}-projects`);
+      }
+    });
+  }
+</script>

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #412d55;
+  --bg-alt: #2d2a3d;
+  --text-main: #eaeaea;
+  --accent-blue: #6ec1e4;
+  --accent-green: #a0e8af;
+}
+
+li a {
+  color: var(--text-main);
+}
+li a:hover {
+  color: var(--accent-blue);
+}

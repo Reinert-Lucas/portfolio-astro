@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import avatar from "../assets/imgs/avatar.jpg";
+---
+
+<section class="flex-grow flex flex-col justify-center">
+  <Image
+    src={avatar}
+    alt="Lucas Reinert Avatar"
+    class="rounded-full m-2 w-32 h-32"
+    loading="eager"
+    decoding="async"
+  />
+  <h1 class="text-5xl m-2 font-extrabold">Hola, soy Lucas</h1>
+  <a
+    href="https://www.linkedin.com/in/lucas-reinert-134020273"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="border rounded-full p-1 w-62 text-center m-1 border-green-300 text-green-300 hover:text-cyan-300 hover:border-cyan-300"
+  >
+    Disponible para Trabajar
+  </a>
+  <p class="m-2 mb-0 text-wrap max-w-150 font-normal">
+    <strong class="text-2xl text-indigo-400">
+      &lt;/Desarrollador Web Junior&gt;
+    </strong>{" "}
+    de Misiones, Argentina. Actualmente tengo 19 años y estoy cursando una{" "}
+    <span class="text-indigo-200">
+      Tec. Sup. en Desarrollo de Aplicaciones y Páginas Web
+    </span>
+  </p>
+</section>

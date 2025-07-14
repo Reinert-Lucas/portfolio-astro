@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "Gestor de Talleres Escolares",
+    "type": "Full",
+    "desc": "Esta Aplicacion Web esta diseñada para la Creacion y Gestion de Talleres de Apoyo Escolares. La misma permite a los alumnos ver y anotarse a los talleres disponibles y a los profesores ver los alumnos inscriptos a los talleres, crear nuevos, editar los ya existentes y eliminarlos.",
+    "img": "/imgs/1.webp",
+    "git": "https://github.com/Reinert-Lucas/Gestion-de-Talleres-Escolares"
+  },
+  {
+    "id": 2,
+    "title": "Gestor y Buscador de Productos",
+    "type": "Full",
+    "desc": "Sistema de gestión de productos para comercios medianos, desarrollado en Node.js y Express. Este sistema permite a los usuarios consultar productos, códigos y precios, y cuenta con roles de usuario y administrador para el control de accesos.",
+    "img": "/imgs/2.webp",
+    "git": "https://github.com/Reinert-Lucas/gestion-productos"
+  },
+  {
+    "id": 3,
+    "title": "Martina’s Pastelería",
+    "type": "Front",
+    "desc": "Pagina Web Estatica de Martina's Pastelería, hecha con HTML5, CSS3 y Bootstrap. Estetica minimalista, con colores suaves y letras em cursiva, contiene imagenes de los productos, informacion general e informacion de contacto. Con practicas de SEO para mejor posicionamiento ",
+    "img": "/imgs/3.webp",
+    "git": "https://github.com/Reinert-Lucas/Martinas-Pasteleria",
+    "extra": "https://martinas-pasteleria.com.ar/"
+  },
+  {
+    "id": 4,
+    "title": "Bot de Discord - ARI",
+    "type": "Back",
+    "desc": "Un bot de Discord diseñado para una comunidad del juego Albion Online, que permite gestionar listas negras de jugadores (blacklist) y obtener información sobre asistencia a eventos del juego, ademas permite programar eventos a modo de Recordatorio.",
+    "img": "/imgs/4.webp",
+    "git": "https://github.com/Reinert-Lucas/ARI-BotDS"
+  },
+  {
+    "id": 5,
+    "title": "Proyecto Express/React",
+    "type": "Full",
+    "desc": "En este proyecto hice un login simple, consultando una API hecha en Express.js y una vista /weather que muestra el Clima en Argentina, usando una API externa (https://open-meteo.com).",
+    "img": "/imgs/5.webp",
+    "git": "https://github.com/Reinert-Lucas/express-react-project"
+  },
+  {
+    "id": 6,
+    "title": "Crud con Java",
+    "type": "Full",
+    "desc": "Trabajo de Final de Cuatrimestre (Prog. Avanzada): CRUD hecho con Java - Sistema para la VTV-Argentina El mismo permite ingresar como Cliente y como Inspector",
+    "img": "/imgs/6.webp",
+    "git": "https://github.com/Reinert-Lucas/Crud-Java"
+  }
+]
