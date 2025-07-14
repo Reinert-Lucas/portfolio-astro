@@ -1,7 +1,5 @@
 ---
 import datos from "../lib/data.json";
-import { Image } from "astro:assets";
-import avatar from "../assets/imgs/avatar.jpg";
 
 type Work = {
   title: string;
@@ -21,19 +19,51 @@ const works: Work[] = datos
     description: work.desc,
     image: work.img,
     link: work.git,
-    extra: work.extra || "no",
+    extra: work.extra,
   }));
 ---
 
-<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 overflow-y-auto">
+  {
+    works.length === 0 ? (
+      <p class="col-span-full text-center text-lg">
+        No hay proyectos para mostrar.
+      </p>
+    ) : (
+      ""
+    )
+  }
   {
     works.map((work) => (
-      <article>
-        <h1>{work.title}</h1>
-        <img src={work.image} alt="#" />
-        <p>{work.description}</p>
-        <a href={work.link}>GitHub del Proyecto</a>
-        {work.extra ? <a href={work.extra}>Link del Proyecto</a> : ""}
+      <article class="flex flex-col items-center bg-[var(--bg-alt)] p-4 rounded-lg shadow-md transition">
+        <h4 class="text-center mb-4 text-2xl text-wrap">{work.title}</h4>
+        <img
+          src={work.image}
+          alt={`${work.title} Portrait`}
+          loading="eager"
+          class="work-image"
+        />
+        <p class="text-justify font-medium mt-2 mb-2">{work.description}</p>
+        <div class="flex flex-col items-center justify-end gap-2 h-2/12">
+          <a
+            href={work.link}
+            class="hover:text-[var(--accent-blue)] font-normal underline text-sm"
+            target="_blank"
+          >
+            Repositorio del Proyecto
+          </a>
+          {work.extra ? (
+            <a
+              href={work.extra}
+              class="hover:text-[var(--accent-blue)] font-normal underline text-sm"
+              target="_blank"
+            >
+              {work.extra}
+            </a>
+          ) : (
+            ""
+          )}
+        </div>
       </article>
     ))
   }

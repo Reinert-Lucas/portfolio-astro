@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reinert-lucas.netlify.app/sitemap.xml

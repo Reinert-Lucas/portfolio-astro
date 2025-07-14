@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg-main: #412d55;
+  --bg-main: rgb(20, 20, 30);
   --bg-alt: #2d2a3d;
   --text-main: #eaeaea;
   --accent-blue: #6ec1e4;
@@ -13,4 +13,9 @@ li a {
 }
 li a:hover {
   color: var(--accent-blue);
+}
+.work-image {
+  width: 100%;
+  height: 12rem;
+  border-radius: 0.5rem;
 }
