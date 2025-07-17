@@ -53,7 +53,7 @@
     "title": "Portfolio React - TS - Express",
     "type": "Full",
     "desc": "Este era mi portfolio hecho con React, Typescript y una API hecha en express. Debido a la complejidad innecesaria, lo reemplaze por el actual hecho completamente en Astro y TS",
-    "img": "/imgs/6.webp",
+    "img": "/imgs/7.webp",
     "git": "https://github.com/Reinert-Lucas/portfolio-react-ts"
   }
 ]
