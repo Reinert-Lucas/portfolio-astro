@@ -50,10 +50,10 @@
   },
   {
     "id": 7,
-    "title": "Portfolio React - TS - Express",
-    "type": "Full",
-    "desc": "Este era mi portfolio hecho con React, Typescript y una API hecha en express. Debido a la complejidad innecesaria, lo reemplaze por el actual hecho completamente en Astro y TS",
+    "title": "Web Inmobiliaria",
+    "type": "Front",
+    "desc": "Trabajo Final para la materia 'Desarrollo Web' 2° Año - Tec. Sup. en Desarrollo de Aplicaciones y Paginas Web (Inst. Sup. Espiritu Santo - Posadas, Misiones)",
     "img": "/imgs/7.webp",
-    "git": "https://github.com/Reinert-Lucas/portfolio-react-ts"
+    "git": "https://github.com/Reinert-Lucas/web-inmobiliaria"
   }
 ]
