@@ -1,15 +1,32 @@
 ---
 import About from "../components/About.astro";
 import Techs from "../components/Techs.astro";
+import Experience from "../components/Experience.astro"; // Importamos
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
   <main class="flex-grow flex justify-center items-start p-5">
-    <section class="text-cyan-50 h-auto">
+    <section class="text-cyan-50 h-auto w-full max-w-4xl">
       <About />
-      <h2 class="text-center m-4">Tecnologias que Manejo</h2>
-      <Techs />
+      
+      <div class="mt-16">
+        <h2 class="text-center text-3xl font-bold mb-8 flex items-center justify-center gap-3">
+            <span class="h-px w-12 bg-indigo-400/50"></span>
+            Tecnologías
+            <span class="h-px w-12 bg-indigo-400/50"></span>
+        </h2>
+        <Techs />
+      </div>
+
+      <div class="mt-20">
+        <h2 class="text-center text-3xl font-bold mb-10 flex items-center justify-center gap-3">
+            <span class="h-px w-12 bg-indigo-400/50"></span>
+            Experiencia Laboral
+            <span class="h-px w-12 bg-indigo-400/50"></span>
+        </h2>
+        <Experience />
+      </div>
     </section>
   </main>
 </Layout>

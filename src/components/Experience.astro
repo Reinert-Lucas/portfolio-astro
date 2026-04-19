@@ -1,0 +1,42 @@
+---
+const EXPERIENCE = [
+  {
+    date: "2022 - Presente",
+    title: "Desarrollador Full Stack Freelance",
+    company: "Proyectos Independientes",
+    description:
+      "Desarrollo de sistemas CRUD personalizados utilizando Laravel, Blade, React, TypeScript, NodeJS, MongoDB, etc. Optimización de interfaces para negocios locales y gestión de inventarios.",
+  },
+  {
+    date: "Marzo 2025 - Noviembre 2025",
+    title: "Practicas Profesionales",
+    company: "Instituto Superior Espiritu Santo",
+    description:
+      "Colaboré en el desarrollo de un sistema de Gestión Académica en el marco de las Prácticas Profesionalizantes de mi Tecnicatura Superior en Desarollo de Aplicaciones y Paginas Web.",
+  },
+];
+---
+
+<section class="max-w-3xl mx-auto mt-12 px-4">
+  <div class="relative border-s border-indigo-400/30 ml-3">
+    {
+      EXPERIENCE.map((item) => (
+        <div class="mb-10 ms-6">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-neutral-950 rounded-full -start-3 ring-8 ring-neutral-950">
+            <div class="w-3 h-3 bg-indigo-400 rounded-full shadow-[0_0_10px_rgba(129,140,248,0.8)]" />
+          </span>
+          
+          <h3 class="flex items-center mb-1 text-xl font-bold text-indigo-400">
+            {item.title}
+          </h3>
+          <time class="block mb-2 text-sm font-normal leading-none text-indigo-200/60">
+            {item.date} • {item.company}
+          </time>
+          <p class="text-base font-normal text-cyan-50/80 text-pretty">
+            {item.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</section>

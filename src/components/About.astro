@@ -4,24 +4,27 @@ import { Image } from "astro:assets";
 import avatar from "../assets/imgs/avatar.jpg";
 ---
 
-<section class="flex-grow flex flex-col justify-center">
+<section class="flex-grow flex flex-col items-center justify-center text-center mx-auto w-full">
   <Image
     src={avatar}
     alt="Lucas Reinert Avatar"
-    class="rounded-full m-2 w-32 h-32"
+    class="rounded-full m-2 w-32 h-32 object-cover shadow-[0_0_15px_rgba(129,140,248,0.2)]"
     loading="eager"
     decoding="async"
   />
-  <h1 class="text-5xl m-2 font-extrabold">Hola, soy Lucas</h1>
+  <h1 class="text-5xl m-2 font-extrabold mt-4">Hola, soy Lucas</h1>
+  
   <a
     href="https://www.linkedin.com/in/lucas-reinert-134020273"
     target="_blank"
     rel="noopener noreferrer"
-    class="border rounded-full p-1 w-62 text-center m-1 border-green-300 text-green-300 hover:text-cyan-300 hover:border-cyan-300"
+    class="border rounded-full py-1 px-4 text-center my-3 border-green-300 text-green-300 hover:text-cyan-300 hover:border-cyan-300 transition-colors duration-300 ease-in-out"
   >
     Disponible para Trabajar
   </a>
-  <p class="m-2 mb-0 text-wrap max-w-150 font-normal">
+  
+  {/* Usamos text-balance para que las líneas del párrafo queden simétricas */}
+  <p class="m-2 mb-0 text-balance max-w-2xl font-normal">
     <strong class="text-2xl text-indigo-400">
       &lt;/Desarrollador Web Junior&gt;
     </strong>{" "}

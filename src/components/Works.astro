@@ -23,48 +23,57 @@ const works: Work[] = datos
   }));
 ---
 
-<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 p-4">
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pb-12">
   {
     works.length === 0 ? (
-      <p class="col-span-full text-center text-lg">
-        No hay proyectos para mostrar.
+      <p class="col-span-full text-center text-lg text-indigo-200/60 mt-10">
+        No hay proyectos para mostrar en esta categoría.
       </p>
     ) : (
-      ""
-    )
-  }
-  {
-    works.map((work) => (
-      <article class="flex flex-col items-center bg-[var(--bg-alt)] p-4 rounded-lg shadow-md transition">
-        <h4 class="text-center mb-4 text-2xl text-wrap">{work.title}</h4>
-        <img
-          src={work.image}
-          alt={`${work.title} Portrait`}
-          loading="eager"
-          class="work-image"
-        />
-        <p class="text-justify font-medium mt-2 mb-2">{work.description}</p>
-        <div class="flex flex-col items-center justify-end gap-2 h-2/12">
-          <a
-            href={work.link}
-            class="hover:text-[var(--accent-blue)] font-normal underline text-sm"
-            target="_blank"
-          >
-            Repositorio del Proyecto
-          </a>
-          {work.extra ? (
+      works.map((work) => (
+        <article class="flex flex-col bg-[#33274785]/60 backdrop-blur-sm border border-indigo-400/20 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(129,140,248,0.2)] group">
+          
+          {/* Imagen estandarizada a 16:9 */}
+          <div class="overflow-hidden rounded-xl mb-4 border border-white/5">
+            <img
+              src={work.image}
+              alt={`Captura del proyecto ${work.title}`}
+              loading="lazy"
+              class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          <h4 class="text-xl font-bold text-indigo-300 mb-2">{work.title}</h4>
+          
+          <p class="text-sm font-normal text-cyan-50/80 mb-6 text-pretty line-clamp-4">
+            {work.description}
+          </p>
+
+          {/* mt-auto fuerza a este contenedor a irse al fondo de la tarjeta */}
+          <div class="mt-auto flex flex-col gap-3 w-full border-t border-indigo-400/20 pt-4">
             <a
-              href={work.extra}
-              class="hover:text-[var(--accent-blue)] font-normal underline text-sm"
+              href={work.link}
               target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center w-full py-2 rounded-lg bg-indigo-500/10 text-indigo-300 text-sm font-medium border border-indigo-500/20 hover:bg-indigo-500/20 hover:border-indigo-400 transition-colors"
             >
-              {work.extra}
+              Ver Repositorio
             </a>
-          ) : (
-            ""
-          )}
-        </div>
-      </article>
-    ))
+            
+            {work.extra && (
+              <a
+                href={work.extra}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center w-full py-2 rounded-lg text-cyan-300 text-sm font-medium hover:text-cyan-200 hover:underline transition-colors"
+              >
+                Visitar Demo
+              </a>
+            )}
+          </div>
+
+        </article>
+      ))
+    )
   }
 </section>
