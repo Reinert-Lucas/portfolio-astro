@@ -39,5 +39,13 @@
     "desc": "Trabajo Final para la materia 'Desarrollo Web' 2° Año - Tec. Sup. en Desarrollo de Aplicaciones y Paginas Web (Inst. Sup. Espiritu Santo - Posadas, Misiones)",
     "img": "/imgs/7.webp",
     "git": "https://github.com/Reinert-Lucas/web-inmobiliaria"
+  },
+  {
+    "id": 8,
+    "title": "Crud con Laravel",
+    "type": "Back",
+    "desc": "CRUD hecho en mi curso de PHP y Laravel",
+    "img": "/imgs/8.webp",
+    "git": "https://github.com/Reinert-Lucas/Curso-Laravel-CRUD"
   }
 ]
