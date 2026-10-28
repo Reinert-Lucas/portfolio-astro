@@ -2,6 +2,19 @@
 import "../styles/global.css";
 import { Image } from "astro:assets";
 import avatar from "../assets/imgs/avatar.jpg";
+
+const edad = (() => {
+  const nacimiento = new Date(2006, 0, 9);
+  const hoy = new Date();
+  let edad = hoy.getFullYear() - nacimiento.getFullYear();
+
+  const m = hoy.getMonth() - nacimiento.getMonth();
+  if (m < 0 || (m === 0 && hoy.getDate() < nacimiento.getDate())) {
+    edad--;
+  }
+
+  return edad;
+})();
 ---
 
 <section class="flex-grow flex flex-col items-center justify-center text-center mx-auto w-full">
@@ -22,13 +35,11 @@ import avatar from "../assets/imgs/avatar.jpg";
   >
     Disponible para Trabajar
   </a>
-  
-  {/* Usamos text-balance para que las líneas del párrafo queden simétricas */}
-  <p class="m-2 mb-0 text-balance max-w-2xl font-normal">
+    <p class="m-2 mb-0 text-balance max-w-2xl font-normal">
     <strong class="text-2xl text-indigo-400">
       &lt;/Desarrollador Web Junior&gt;
     </strong>{" "}
-    de Misiones, Argentina. Actualmente tengo 19 años y estoy cursando una{" "}
+    de Misiones, Argentina. Actualmente tengo {edad} años y estoy cursando una{" "}
     <span class="text-indigo-200">
       Tec. Sup. en Desarrollo de Aplicaciones y Páginas Web
     </span>
