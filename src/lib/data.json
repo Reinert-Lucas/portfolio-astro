@@ -47,5 +47,13 @@
     "desc": "CRUD hecho en mi curso de PHP y Laravel",
     "img": "/imgs/8.webp",
     "git": "https://github.com/Reinert-Lucas/Curso-Laravel-CRUD"
+  },
+  {
+    "id": 8,
+    "title": "BTZ-App",
+    "type": "Full",
+    "desc": "Sistema Web y Movil para la Gestion de Personal. Desarrollado para la empresa BTZ Instalaciones & Servicios",
+    "img": "/imgs/9.webp",
+    "git": "https://github.com/Reinert-Lucas/BTZ-App"
   }
 ]
